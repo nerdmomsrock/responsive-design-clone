@@ -1,0 +1,105 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.App {
+  height: 100vh;
+  background-image: url("https://media.discordapp.net/attachments/794686145707507722/835573003685199882/header-bg.jpg?width=1384&height=911");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav {
+  display: flex;
+  background: rgb(35, 36, 36);
+  height: 80px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+}
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  width: 600px;
+}
+h1 {
+  color: gold;
+  font-family: cursive;
+  font-size: 30px;
+}
+li {
+  cursor: pointer;
+  color: white;
+}
+li:hover {
+  color: gold;
+}
+
+.menu {
+  display: none;
+  background: gold;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.menu:hover {
+  background-color: rgb(230, 198, 14);
+}
+.hamburger {
+  width: 35px;
+  height: 25px;
+  background-color: white;
+}
+
+.main-box {
+  height: 100vh;
+  padding: 0;
+}
+
+.welcome {
+  color: white;
+  padding: 30px;
+  font-size: 40px;
+  margin: 0;
+}
+
+.meet {
+  color: white;
+  padding: 20px;
+  font-family: arial;
+  font-size: 80px;
+  letter-spacing: 5px;
+}
+
+.tell-me {
+  background-color: gold;
+  color: white;
+  height: 60px;
+  width: 200px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.tell-me:hover {
+  background-color: rgb(230, 198, 14);
+}
+
+@media (max-width: 1000px) {
+  .menu {
+    display: block;
+  }
+  ul {
+    display: none;
+  }
+}
