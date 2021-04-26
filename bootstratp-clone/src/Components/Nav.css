@@ -25,7 +25,7 @@ nav {
   align-items: center;
   padding: 0;
 }
-ul {
+.nav {
   display: flex;
   list-style: none;
   justify-content: space-between;
@@ -43,8 +43,13 @@ li {
 li:hover {
   color: gold;
 }
+.links {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
 
-.menu {
+.menuButton {
   display: none;
   background: gold;
   color: white;
@@ -52,13 +57,26 @@ li:hover {
   border-radius: 8px;
   cursor: pointer;
 }
-.menu:hover {
+.menuButton:hover {
   background-color: rgb(230, 198, 14);
 }
 .hamburger {
   width: 35px;
   height: 25px;
   background-color: white;
+}
+menu {
+  width: 100vw;
+  height: 0px;
+  background: rgb(35, 36, 36);
+  position: fixed;
+  margin-top: 0;
+  transition-property: height;
+  transition-duration: 1s;
+}
+
+.menu-open {
+  height: 385px;
 }
 
 .main-box {
@@ -95,11 +113,17 @@ li:hover {
   background-color: rgb(230, 198, 14);
 }
 
+.menuLinks {
+  list-style: none;
+  overflow: hidden;
+  display: none;
+}
+
 @media (max-width: 1000px) {
-  .menu {
+  .menuButton {
     display: block;
   }
-  ul {
+  .links {
     display: none;
   }
 }

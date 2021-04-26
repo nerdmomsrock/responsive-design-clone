@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./Nav.css";
-import Animations from "./Animations";
 
 class Nav extends Component {
   constructor() {
@@ -14,18 +13,19 @@ class Nav extends Component {
     this.setState({ menuOpen: !this.state.menuOpen });
   };
   render() {
+    const menuClass = this.state.menuOpen ? "menu-open" : "";
     return (
       <div className="page">
         <nav>
           <h1>Start Bootstrap</h1>
-          <ul>
+          <ul className="links">
             <li>SERVICES</li>
             <li>PORTFOLIO</li>
             <li>ABOUT</li>
             <li>TEAM</li>
             <li>CONTACT</li>
           </ul>
-          <button className="menu" onClick={this.handleClick}>
+          <button className="menuButton" onClick={this.handleClick}>
             MENU
             <img
               className="hamburger"
@@ -34,7 +34,16 @@ class Nav extends Component {
             />
           </button>
         </nav>
-        <Animations isOpen={this.state.menuOpen} />
+        <menu className={menuClass}>
+          <ul className="menuLinks">
+            <li>SERVICES</li>
+            <li>PORTFOLIO</li>
+            <li>ABOUT</li>
+            <li>TEAM</li>
+            <li>CONTACT</li>
+          </ul>
+        </menu>
+
         <div className="main-box">
           <h1 className="welcome">Welcome To Our Studio!</h1>
           <h1 className="meet">IT'S NICE TO MEET YOU</h1>
