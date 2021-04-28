@@ -48,6 +48,9 @@ li:hover {
   display: flex;
   justify-content: space-between;
 }
+.links li {
+  padding: 10px;
+}
 
 .menuButton {
   display: none;
@@ -116,7 +119,6 @@ menu {
 .menuLinks {
   list-style: none;
   overflow: hidden;
-  display: none;
 }
 
 @media (max-width: 1000px) {

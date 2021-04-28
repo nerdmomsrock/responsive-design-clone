@@ -34,7 +34,7 @@ class Nav extends Component {
             />
           </button>
         </nav>
-        <menu className={menuClass}>
+        <menu className={menuClass} style={{ overflow: "hidden" }}>
           <ul className="menuLinks">
             <li>SERVICES</li>
             <li>PORTFOLIO</li>
